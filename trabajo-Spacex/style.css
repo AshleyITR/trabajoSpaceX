@@ -1,0 +1,22 @@
+body{
+  background-color: rgb(51, 48, 48) !important;
+}
+
+
+#headerImg{
+  background-image: url('https://www.spacex.com/static/images/backgrounds/Updates_Header.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+
+}
+#titleTxt{
+ 
+    position: absolute;
+    width: 50%;
+    top: 60%;
+}
+.text-warning {
+  color: orangered !important;
+}
