@@ -64,7 +64,7 @@ post();
     search = document.getElementById("searchInput").value;
 
     search.toLowerCase();
-    if (search != " ") {
+    if (search != "") {
       console.log(search);
       switch (search) {
         case 'rockets':
@@ -72,11 +72,9 @@ post();
           break;
         case 'capsule':
          info = 'dragons';
-          break;
-       
-       
+          break;       
       }
     } else{
-      alert('type something')
+      alert('type something');
     }
   });
