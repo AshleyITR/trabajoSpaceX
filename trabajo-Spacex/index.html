@@ -18,8 +18,8 @@
           <img src="/trabajo-Spacex/img/spacex-logo-png.png" alt="" height="50">
         </a>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-warning" type="submit">Search</button>
+          <input class="form-control me-2" type="search" id="searchInput"placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-warning" id="buttonSubmit"type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -28,11 +28,11 @@
   <h1 class="text-warning" id="titleTxt">Welcome to SpaceX page</h1>
 </section>
 
-    <main class="container">
+    <section class="container" id="capsuleInfo">
       <h1 class="text-warning" id="capsuleName">Capsules</h1>
-      <div id="imgs"></div>
-    </main>
-
+      <div id="imgs" class="row"></div>
+    </section>
+    
 
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
