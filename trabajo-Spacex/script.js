@@ -21,7 +21,7 @@ const post = function () {
                <span class="badge bg-primary">Crew capacity: ${data[0].crew_capacity}</span></li>
               </ul>
             </div>
-          </div>`
+          </div><br>`
 
 
         }
