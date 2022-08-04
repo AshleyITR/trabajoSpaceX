@@ -16,13 +16,15 @@ buttonSearch.addEventListener('click', function (info) {
     console.log(search);
     switch (search) {
       case 'rockets':
-        info = search; //se borra luego de tocar el boton, no se guarda
-
+        info = search; 
+       
         break;
-      case 'dragon':
-        info = search; //se borra luego de tocar el boton, no se guarda
+      case 'dragons':
+        info = search; 
+      
         break;
     }
+    post(info);
   } else {
     alert('type something');
   }
