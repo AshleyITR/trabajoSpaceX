@@ -4,7 +4,7 @@ let sectionName = document.getElementById("capsuleName").value;
 let imgs = document.getElementById("imgs");
 let buttonSearch = document.querySelector('#buttonSubmit');
 let search = document.getElementById("searchInput").value;
-let info = 'dragons';
+let info = 'rockets';
 
 let footerContent = document.getElementById("footerContent");
 
