@@ -5,7 +5,7 @@ let imgs = document.getElementById("imgs");
 let buttonSearch = document.querySelector('#buttonSubmit');
 let search = document.getElementById("searchInput").value;
 let info = 'rockets';
-
+let apiKey = 'AIzaSyAoeAk0n_FmcshMuqEJQAlY4p1qVoNJPpo';
 let footerContent = document.getElementById("footerContent");
 
 buttonSearch.addEventListener('click', function (info) {
@@ -42,7 +42,7 @@ function isActive(isActive) {
 }
 const post = function (info) {
 
-  fetch(`https://api.spacexdata.com/v4/`+ info) // info = rockets or dragons
+  fetch(`https://api.spacexdata.com/v4/`+ info + `&key=${apiKey}`) // info = rockets or dragons
     .then(response => response.json())  // convertir a json
 
     .then(function (data) {
