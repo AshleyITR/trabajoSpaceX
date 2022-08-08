@@ -21,7 +21,7 @@ const history = function () {
                  <p class="card-text">${dato.details}</p>
                 <a href="${dato.links.article}" target=”_blank” class="btn btn-primary">article</a>
                 </div>
-                <div class="card-footer text-muted"> Date: ${dato.event_date_utc}</div>
+                <div class="card-footer text-muted"> Date: ${dato.event_date_utc.substring(dato.event_date_utc.search('T'),'Z')}</div> 
             </div>
             
             </div>
@@ -30,7 +30,7 @@ const history = function () {
             });
 
 
-        }
+        } // ${dato.event_date_utc.substring(dato.event_date_utc.search('T'),'Z')} --> elimina desde que encuentra T hasta que encuentra Z
         )
 
         .catch(err => console.log('Solicitud fallida', err)); // Capturar errores
