@@ -1,34 +1,41 @@
 'use strict';
+var key = config.SECRET_API_KEY;
+
 
 let sectionName = document.getElementById("capsuleName").value;
 let imgs = document.getElementById("imgs");
 let buttonSearch = document.querySelector('#buttonSubmit');
-let search = document.getElementById("searchInput").value;
-let info = 'rockets';
-let apiKey = 'AIzaSyAoeAk0n_FmcshMuqEJQAlY4p1qVoNJPpo';
+let navCapsules = document.getElementById("navCapsules");
+let navRockets = document.getElementById("navRockets");
+let info = '';
+
 let footerContent = document.getElementById("footerContent");
 
-buttonSearch.addEventListener('click', function (info) {
-  search = document.getElementById("searchInput").value;
+function sectionInfo() {
+  let search = document.getElementById("searchInput").value;
 
   search.toLowerCase();
   if (search != "") {
     console.log(search);
     switch (search) {
       case 'rockets':
-        info = search; 
-       
+        info = search;
+
         break;
       case 'dragons':
-        info = search; 
-      
+        info = search;
+
         break;
     }
-    post(info);
+    post(search);
   } else {
     alert('type something');
   }
-});
+}
+
+
+
+
 console.log(info);
 
 function isActive(isActive) {
@@ -41,8 +48,8 @@ function isActive(isActive) {
 
 }
 const post = function (info) {
-
-  fetch(`https://api.spacexdata.com/v4/`+ info + `&key=${apiKey}`) // info = rockets or dragons
+  //console.log(import.meta.env.API_KEY);
+  fetch(`https://api.spacexdata.com/v4/` + info + '&key=' + key) // info = rockets or dragons //+ `&key=${process.env.API_KEY}`
     .then(response => response.json())  // convertir a json
 
     .then(function (data) {
@@ -81,8 +88,9 @@ const post = function (info) {
 };
 
 post(info);
-
-
+navCapsules.addEventListener('click', (e) => post(e.target.name));
+navRockets.addEventListener('click', (e) => post(e.target.name));
+buttonSearch.addEventListener('click', () => sectionInfo(info));
 
 
 
